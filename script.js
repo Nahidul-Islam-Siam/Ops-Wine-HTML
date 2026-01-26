@@ -1,3 +1,4 @@
+// script.js
 // State variables
 let isMobileMenuOpen = false;
 let isProfileMenuOpen = false;

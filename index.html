@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ops.Wine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <a href="tel:+1234567890">
+        <svg class="icon-svg phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M11.3748 12.8333C11.6069 12.8333 11.8295 12.7411 11.9936 12.5771C12.1576 12.413 12.2498 12.1904 12.2498 11.9583V9.91667C12.2498 9.6846 12.1576 9.46204 11.9936 9.29795C11.8295 9.13385 11.6069 9.04167 11.3748 9.04167C10.6923 9.04167 10.0215 8.93667 9.37984 8.72083C9.22643 8.67241 9.06268 8.66693 8.90637 8.70497C8.75007 8.74302 8.60716 8.82315 8.49317 8.93667L7.65317 9.77667C6.20198 8.98474 5.00926 7.79203 4.21734 6.34083L5.0515 5.50667C5.29067 5.27917 5.37817 4.94083 5.27317 4.61417C5.06317 3.97833 4.95817 3.3075 4.95817 2.625C4.95817 2.39294 4.86598 2.17038 4.70189 2.00628C4.53779 1.84219 4.31523 1.75 4.08317 1.75H2.0415C1.80944 1.75 1.58688 1.84219 1.42279 2.00628C1.25869 2.17038 1.1665 2.39294 1.1665 2.625C1.1665 8.25417 5.74567 12.8333 11.3748 12.8333ZM2.0415 2.33333H4.08317C4.16053 2.33333 4.23471 2.36406 4.28941 2.41876C4.34411 2.47346 4.37484 2.54765 4.37484 2.625C4.37484 3.37167 4.4915 4.10083 4.719 4.795C4.74817 4.87667 4.74234 4.99333 4.649 5.08667L3.49984 6.23C4.46234 8.11417 5.874 9.52583 7.764 10.5L8.9015 9.35083C8.98317 9.26917 9.094 9.24583 9.199 9.275C9.899 9.50833 10.6282 9.625 11.3748 9.625C11.4522 9.625 11.5264 9.65573 11.5811 9.71043C11.6358 9.76513 11.6665 9.83931 11.6665 9.91667V11.9583C11.6665 12.0357 11.6358 12.1099 11.5811 12.1646C11.5264 12.2193 11.4522 12.25 11.3748 12.25C6.0665 12.25 1.74984 7.93333 1.74984 2.625C1.74984 2.54765 1.78057 2.47346 1.83526 2.41876C1.88996 2.36406 1.96415 2.33333 2.0415 2.33333Z" fill="#6D0E0B"/></svg>
+        +1 (234) 567890
+      </a>
+      <a href="mailto:support@winemail.com">
+        <svg class="icon-svg email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M11.9998 4H3.99984C3.26346 4 2.6665 4.59695 2.6665 5.33333V10.6667C2.6665 11.403 3.26346 12 3.99984 12H11.9998C12.7362 12 13.3332 11.403 13.3332 10.6667V5.33333C13.3332 4.59695 12.7362 4 11.9998 4Z" stroke="#6D0E0B"/><path d="M2.6665 6L7.40384 8.36867C7.5889 8.46115 7.79295 8.50929 7.99984 8.50929C8.20672 8.50929 8.41077 8.46115 8.59584 8.36867L13.3332 6" stroke="#6D0E0B"/></svg>
+        support@winemail.com
+      </a>
+    </div>
+    <div class="language-switcher">
+      <button class="active" onclick="switchLanguage('English')">English</button>
+      <span>|</span>
+      <button onclick="switchLanguage('Italian')">Italian</button>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <div class="logo-placeholder">OPS.WINE</div>
+        </a>
+      </div>
+
+      <!-- Search Bar (Desktop) -->
+      <div class="search-bar">
+        <div style="position: relative; width: 100%;">
+          <input type="text" placeholder="Search..." />
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.28C18.05 10.36 18.05 4.8 14.4 1.15c-3.65-3.65-9.51-3.65-13.15 0-3.65 3.65-3.65 9.51 0 13.15 3.65 3.65 9.51 3.65 13.15 0l.28.28v.79l4.8 4.8c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49l-4.8-4.8zm-6.5 0C6.48 14 4.5 12.02 4.5 9.5S6.48 5 9 5s4.5 1.98 4.5 4.5S11.52 14 9 14z"/></svg>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/events">Events</a>
+        <a href="/faq">FAQ</a>
+        <a href="/blog">Blog</a>
+        <a href="/contacts">Contacts</a>
+        <a href="/about">About</a>
+      </div>
+
+      <!-- Right Icons -->
+      <div class="right-icons">
+        <!-- Cart -->
+        <div class="profile-dropdown">
+          <a href="/cart" class="icon-btn cart-btn">
+            <svg class="icon-svg cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 11h-1.478c-2.136 0-3.858 1.722-3.858 3.858v1.478c0 2.136 1.722 3.858 3.858 3.858H19V11zM7 11H5v12h2v-12zm14 0v12h-2V11h-2c-2.136 0-3.858 1.722-3.858 3.858v1.478c0 2.136 1.722 3.858 3.858 3.858H17v-12z"/></svg>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+        </div>
+
+        <!-- Profile / Auth -->
+        <div class="profile-dropdown">
+          <div class="icon-btn" onclick="toggleProfileMenu()">
+            <svg class="icon-svg user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div id="profile-menu" class="dropdown-menu" style="display: none;">
+            <a href="/profile">Profile</a>
+            <button onclick="handleLogout()">Logout</button>
+          </div>
+        </div>
+
+        <!-- Guest Login/Sign Up (Hidden if logged in) -->
+        <div id="guest-auth" style="display: none;">
+          <a href="/login" class="auth-btn">Login</a>
+          <a href="/register" class="auth-btn">Sign Up</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <svg class="icon-svg menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" style="display: none;">
+      <div class="search-bar">
+        <div style="position: relative; width: 100%;">
+          <input type="text" placeholder="Search..." />
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.28C18.05 10.36 18.05 4.8 14.4 1.15c-3.65-3.65-9.51-3.65-13.15 0-3.65 3.65-3.65 9.51 0 13.15 3.65 3.65 9.51 3.65 13.15 0l.28.28v.79l4.8 4.8c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49l-4.8-4.8zm-6.5 0C6.48 14 4.5 12.02 4.5 9.5S6.48 5 9 5s4.5 1.98 4.5 4.5S11.52 14 9 14z"/></svg>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="/" onclick="closeMobileMenu()">Home</a>
+        <a href="/shop" onclick="closeMobileMenu()">Shop</a>
+        <a href="/events" onclick="closeMobileMenu()">Events</a>
+        <a href="/faq" onclick="closeMobileMenu()">FAQ</a>
+        <a href="/blog" onclick="closeMobileMenu()">Blog</a>
+        <a href="/contacts" onclick="closeMobileMenu()">Contacts</a>
+        <a href="/about" onclick="closeMobileMenu()">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section relative w-full overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1573768762455-9b4a8e7c5d5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+        alt="Wine Heritage" 
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-[80vh] sm:h-[70vh] md:h-[80vh] lg:h-[80vh] px-4 text-center text-white">
+      <!-- Subtitle -->
+      <p class="text-xs sm:text-sm md:text-[20px] font-medium tracking-wider mb-2 text-[#AF6900]">
+        Hero 1 subtitle generated
+      </p>
+
+      <!-- Title -->
+      <h1 class="text-4xl sm:text-5xl md:text-[64px] font-abhaya font-bold leading-tight md:leading-[94px] mb-4 max-w-5xl text-center">
+        Hero 1 title generated
+      </h1>
+
+      <!-- Description -->
+      <p class="text-xs sm:text-sm md:text-[20px] max-w-5xl mb-8 md:leading-normal text-center opacity-90">
+        Experience the richness of global wine heritage with bottles that tell stories of tradition, innovation, and passion—crafted to offer unmatched depth, aroma, and elegance.
+      </p>
+
+      <!-- Button -->
+      <a 
+        href="/shop" 
+        class="px-6 py-2 sm:px-8 sm:py-3 text-base md:text-2xl hover:bg-amber-700 border border-white bg-[#AF6900] text-white font-medium rounded-md font-abhaya font-bold transition-colors shadow-lg hover:shadow-xl"
+      >
+        Shop Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="our-story-section py-16 md:py-24 px-4 md:px-8 lg:px-12">
+    <div class="container mx-auto flex flex-col lg:flex-row items-start gap-12">
+      <!-- LEFT SIDE - TEXT CONTENT -->
+      <div class="lg:w-1/2 space-y-6">
+        <h2 class="text-3xl font-bold text-[#6D0E0B] font-abhaya">Our Story</h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          From the sun-kissed vineyards to your glass, our journey began with a passion for discovering exceptional wines from around the world. We believe every bottle tells a story—of tradition, craft, and the people behind it. Our mission is simple: to bring the finest wines to your table, making every sip an experience to remember.
+        </p>
+
+        <p class="text-gray-600 leading-relaxed">
+          We bring you handpicked wines from around the world, celebrating craftsmanship, flavor, and unforgettable moments.
+        </p>
+
+        <a 
+          href="/about" 
+          class="inline-block px-6 py-3 bg-[#AF6900] text-white font-medium rounded-md transition-colors shadow-md hover:shadow-lg"
+        >
+          See More
+        </a>
+      </div>
+
+      <!-- RIGHT SIDE - IMAGE -->
+      <div class="lg:w-1/2 w-full">
+        <div class="relative w-full h-[300px] sm:h-[400px]">
+          <img 
+            src="https://images.unsplash.com/photo-1573768762455-9b4a8e7c5d5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            alt="Vineyard scene showcasing wine heritage" 
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop By Category Section -->
+  <section class="shop-by-category">
+    <div class="container">
+      <h2>Shop By Category</h2>
+      
+      <!-- Category Tabs -->
+      <div class="category-tabs">
+        <button class="category-tab active" onclick="filterByCategory('All')">All</button>
+        <button class="category-tab" onclick="filterByCategory('Bold Wines')">Bold Wines</button>
+        <button class="category-tab" onclick="filterByCategory('Red Wine')">Red Wine</button>
+        <button class="category-tab" onclick="filterByCategory('Whiskey')">Whiskey</button>
+        <button class="category-tab" onclick="filterByCategory('Rosé Wines')">Rosé Wines</button>
+        <button class="category-tab" onclick="filterByCategory('Sparkling')">Sparkling</button>
+        <button class="category-tab" onclick="filterByCategory('White Wines')">White Wines</button>
+        <button class="category-tab" onclick="filterByCategory('Champagnes')">Champagnes</button>
+        <button class="category-tab" onclick="filterByCategory('green wine')">green wine</button>
+        <button class="category-tab" onclick="filterByCategory('Bolicine')">Bolicine</button>
+        <button class="category-tab" onclick="filterByCategory('Wine')">Wine</button>
+        <button class="category-tab" onclick="filterByCategory('Sparkling Wine')">Sparkling Wine</button>
+        <button class="category-tab" onclick="filterByCategory('Spirits')">Spirits</button>
+        <button class="category-tab" onclick="filterByCategory('Accessories')">Accessories</button>
+      </div>
+      
+      <!-- Products Grid -->
+      <div id="products-grid" class="products-grid">
+        <!-- Products will be rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Products Section -->
+  <section class="trending-products">
+    <div class="container">
+      <h2>Trending Products</h2>
+      
+      <div class="trending-carousel">
+        <!-- Previous Arrow -->
+        <button class="carousel-arrow prev" id="carousel-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+          <div id="carousel-track" class="carousel-track">
+            <!-- Products will be rendered by JavaScript -->
+          </div>
+        </div>
+        
+        <!-- Next Arrow -->
+        <button class="carousel-arrow next" id="carousel-next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>Client's Testimonial</h2>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "The wine selection is exceptional! I found rare bottles I've been searching for. The delivery was prompt and the packaging ensured everything arrived in perfect condition."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div class="author-info">
+              <h4>John Doe</h4>
+              <p>Wine Enthusiast</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "Outstanding service! The staff helped me choose the perfect wines for my dinner party. Every bottle was a hit with my guests. Highly recommend!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SM</div>
+            <div class="author-info">
+              <h4>Sarah Miller</h4>
+              <p>Event Planner</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "Best wine shop experience! The quality is unmatched and the prices are fair. I'm now a loyal customer and recommend them to all my friends."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RJ</div>
+            <div class="author-info">
+              <h4>Robert Johnson</h4>
+              <p>Sommelier</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-fdf8eb border-t border-gray-300">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <!-- Contact Us -->
+        <div class="contact-us">
+          <h3 class="font-semibold text-482817 mb-4">CONTACT US</h3>
+          <div class="space-y-2 text-gray-600">
+            <div>
+              <span class="font-semibold text-482817">Address:</span>
+              <p class="text-968f8f ml-2">26 Wyle Cop, Shrewsbury, Shropshire, SY1 1XD</p>
+            </div>
+            <div>
+              <span class="font-semibold text-482817">Tel:</span>
+              <p class="text-968f8f ml-2">01743 234500</p>
+            </div>
+            <div>
+              <span class="font-semibold text-482817">Email:</span>
+              <p class="text-968f8f ml-2">support@kowine.com</p>
+            </div>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="social-icons flex gap-3 mt-4">
+            <!-- Icons will be injected by JS -->
+          </div>
+        </div>
+
+        <!-- Customer Services -->
+        <div>
+          <h3 class="font-semibold text-482817 mb-4">CUSTOMER SERVICES</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><a href="/#" class="link">Contact & FAQ</a></li>
+            <li><a href="/#" class="link">Track Your Order</a></li>
+            <li><a href="/#" class="link">Returns & Refunds</a></li>
+            <li><a href="/#" class="link">Shipping & Delivery</a></li>
+            <li><a href="/#" class="link">Interest Free Finance</a></li>
+          </ul>
+        </div>
+
+        <!-- About Us -->
+        <div>
+          <h3 class="font-semibold text-482817 mb-4">ABOUT US</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><a href="/#" class="link">Our story</a></li>
+            <li><a href="/#" class="link">Customer Review</a></li>
+            <li><a href="/#" class="link">Press</a></li>
+            <li><a href="/#" class="link">Blog</a></li>
+            <li><a href="/#" class="link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Discover More -->
+        <div class="discover-more">
+          <h3 class="font-semibold text-482817 mb-4">DISCOVER MORE</h3>
+          <ul class="space-y-2 text-gray-600">
+            <!-- Social links will be injected by JS -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-t-2 border-968f8f bg-fdf8eb py-4">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-968f8f text-sm">Copyright © 2025 Ops Wine.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

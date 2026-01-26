@@ -6,6 +6,7 @@ let isLoggedIn = false; // Set to true to simulate logged-in state
 let cartItemCount = 0; // Simulate cart items
 let currentCategory = 'All';
 let currentSlide = 0;
+let currentBlogSlide = 0;
 
 // Product data
 const products = [
@@ -100,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function() {
   renderProducts();
   renderTrendingProducts();
   initializeCarousel();
+  renderBlogPosts();
+  initializeBlogCarousel();
 });
 
 // Language Switcher
@@ -356,4 +359,85 @@ function moveCarousel(direction) {
   
   currentSlide = Math.max(0, Math.min(currentSlide + direction, maxSlides));
   track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+}
+
+// Blog Posts Data
+const blogPosts = [
+  {
+    id: 1,
+    title: 'Famous Wine Regions Around the World',
+    date: { day: 10, month: 'JAN' },
+    author: 'Mr. Admin',
+    views: '11 views',
+    excerpt: 'Certain regions are well known for their long-standing wine traditions. Areas like France\'s Bordeaux, Italy\'s Tuscany, and Spain\'s Rioja are recognized for their unique climates and soil, which...',
+    image: 'https://images.unsplash.com/photo-1560932082-8d5545ed8f95?w=400'
+  },
+  {
+    id: 2,
+    title: 'Famous Wine Regions Around the World',
+    date: { day: 10, month: 'JAN' },
+    author: 'Mr. Admin',
+    views: '11 views',
+    excerpt: 'Certain regions are well known for their long-standing wine traditions. Areas like France\'s Bordeaux, Italy\'s Tuscany, and Spain\'s Rioja are recognized for their unique climates and soil, which...',
+    image: 'https://images.unsplash.com/photo-1585553616435-2dc0a54e271d?w=400'
+  },
+  {
+    id: 3,
+    title: 'The History of Wine: A Journey Through Time',
+    date: { day: 10, month: 'JAN' },
+    author: 'Mr. Admin',
+    views: '11 views',
+    excerpt: 'As time passed, wine spread across Europe through the Greeks and Romans, who improved grape-growing techniques and storage methods. Many of today\'s famous wine regions develope...',
+    image: 'https://images.unsplash.com/photo-1566754477239-8b4552689f90?w=400'
+  }
+];
+
+// Render Blog Posts
+function renderBlogPosts() {
+  const blogTrack = document.getElementById('blog-carousel-track');
+  if (!blogTrack) return;
+  
+  blogTrack.innerHTML = blogPosts.map(post => `
+    <div class="blog-card" onclick="viewBlogPost(${post.id})">
+      <div class="blog-image">
+        <img src="${post.image}" alt="${post.title}" />
+        <div class="blog-date-badge">
+          <span class="blog-date-day">${post.date.day}</span>
+          <span class="blog-date-month">${post.date.month}</span>
+        </div>
+      </div>
+      <div class="blog-content">
+        <h3 class="blog-title">${post.title}</h3>
+        <div class="blog-meta">
+          <span>👤 ${post.author}</span>
+          <span>👁 ${post.views}</span>
+        </div>
+        <p class="blog-excerpt">${post.excerpt}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
+function initializeBlogCarousel() {
+  const prevBtn = document.getElementById('blog-carousel-prev');
+  const nextBtn = document.getElementById('blog-carousel-next');
+  
+  if (prevBtn) prevBtn.addEventListener('click', () => moveBlogCarousel(-1));
+  if (nextBtn) nextBtn.addEventListener('click', () => moveBlogCarousel(1));
+}
+
+function moveBlogCarousel(direction) {
+  const track = document.getElementById('blog-carousel-track');
+  if (!track) return;
+  
+  const cardWidth = 350 + 32; // card width + gap
+  const maxSlides = blogPosts.length - 1;
+  
+  currentBlogSlide = Math.max(0, Math.min(currentBlogSlide + direction, maxSlides));
+  track.style.transform = `translateX(-${currentBlogSlide * cardWidth}px)`;
+}
+
+function viewBlogPost(id) {
+  console.log('View blog post:', id);
+  // Add navigation logic here
 }

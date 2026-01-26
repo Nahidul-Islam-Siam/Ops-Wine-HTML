@@ -1,0 +1,217 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Ops.Wine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="contact-info">
+      <a href="tel:+1234567890">
+        <svg class="icon-svg phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><path d="M11.3748 12.8333C11.6069 12.8333 11.8295 12.7411 11.9936 12.5771C12.1576 12.413 12.2498 12.1904 12.2498 11.9583V9.91667C12.2498 9.6846 12.1576 9.46204 11.9936 9.29795C11.8295 9.13385 11.6069 9.04167 11.3748 9.04167C10.6923 9.04167 10.0215 8.93667 9.37984 8.72083C9.22643 8.67241 9.06268 8.66693 8.90637 8.70497C8.75007 8.74302 8.60716 8.82315 8.49317 8.93667L7.65317 9.77667C6.20198 8.98474 5.00926 7.79203 4.21734 6.34083L5.0515 5.50667C5.29067 5.27917 5.37817 4.94083 5.27317 4.61417C5.06317 3.97833 4.95817 3.3075 4.95817 2.625C4.95817 2.39294 4.86598 2.17038 4.70189 2.00628C4.53779 1.84219 4.31523 1.75 4.08317 1.75H2.0415C1.80944 1.75 1.58688 1.84219 1.42279 2.00628C1.25869 2.17038 1.1665 2.39294 1.1665 2.625C1.1665 8.25417 5.74567 12.8333 11.3748 12.8333ZM2.0415 2.33333H4.08317C4.16053 2.33333 4.23471 2.36406 4.28941 2.41876C4.34411 2.47346 4.37484 2.54765 4.37484 2.625C4.37484 3.37167 4.4915 4.10083 4.719 4.795C4.74817 4.87667 4.74234 4.99333 4.649 5.08667L3.49984 6.23C4.46234 8.11417 5.874 9.52583 7.764 10.5L8.9015 9.35083C8.98317 9.26917 9.094 9.24583 9.199 9.275C9.899 9.50833 10.6282 9.625 11.3748 9.625C11.4522 9.625 11.5264 9.65573 11.5811 9.71043C11.6358 9.76513 11.6665 9.83931 11.6665 9.91667V11.9583C11.6665 12.0357 11.6358 12.1099 11.5811 12.1646C11.5264 12.2193 11.4522 12.25 11.3748 12.25C6.0665 12.25 1.74984 7.93333 1.74984 2.625C1.74984 2.54765 1.78057 2.47346 1.83526 2.41876C1.88996 2.36406 1.96415 2.33333 2.0415 2.33333Z" fill="#6D0E0B"/></svg>
+        +1 (234) 567890
+      </a>
+      <a href="mailto:support@winemail.com">
+        <svg class="icon-svg email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M11.9998 4H3.99984C3.26346 4 2.6665 4.59695 2.6665 5.33333V10.6667C2.6665 11.403 3.26346 12 3.99984 12H11.9998C12.7362 12 13.3332 11.403 13.3332 10.6667V5.33333C13.3332 4.59695 12.7362 4 11.9998 4Z" stroke="#6D0E0B"/><path d="M2.6665 6L7.40384 8.36867C7.5889 8.46115 7.79295 8.50929 7.99984 8.50929C8.20672 8.50929 8.41077 8.46115 8.59584 8.36867L13.3332 6" stroke="#6D0E0B"/></svg>
+        support@winemail.com
+      </a>
+    </div>
+    <div class="language-switcher">
+      <button class="active" onclick="switchLanguage('English')">English</button>
+      <span>|</span>
+      <button onclick="switchLanguage('Italian')">Italian</button>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="/">
+          <div class="logo-placeholder">OPS.WINE</div>
+        </a>
+      </div>
+
+      <!-- Search Bar (Desktop) -->
+      <div class="search-bar">
+        <div style="position: relative; width: 100%;">
+          <input type="text" placeholder="Search..." />
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.28C18.05 10.36 18.05 4.8 14.4 1.15c-3.65-3.65-9.51-3.65-13.15 0-3.65 3.65-3.65 9.51 0 13.15 3.65 3.65 9.51 3.65 13.15 0l.28.28v.79l4.8 4.8c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49l-4.8-4.8zm-6.5 0C6.48 14 4.5 12.02 4.5 9.5S6.48 5 9 5s4.5 1.98 4.5 4.5S11.52 14 9 14z"/></svg>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/events">Events</a>
+        <a href="/faq">FAQ</a>
+        <a href="/blog">Blog</a>
+        <a href="/contacts">Contacts</a>
+        <a href="/about">About</a>
+      </div>
+
+      <!-- Right Icons -->
+      <div class="right-icons">
+        <!-- Cart -->
+        <div class="profile-dropdown">
+          <a href="/cart" class="icon-btn cart-btn">
+            <svg class="icon-svg cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 11h-1.478c-2.136 0-3.858 1.722-3.858 3.858v1.478c0 2.136 1.722 3.858 3.858 3.858H19V11zM7 11H5v12h2v-12zm14 0v12h-2V11h-2c-2.136 0-3.858 1.722-3.858 3.858v1.478c0 2.136 1.722 3.858 3.858 3.858H17v-12z"/></svg>
+            <span id="cart-count" class="cart-count">0</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <svg class="icon-svg menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu" style="display: none;">
+      <div class="search-bar">
+        <div style="position: relative; width: 100%;">
+          <input type="text" placeholder="Search..." />
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.28C18.05 10.36 18.05 4.8 14.4 1.15c-3.65-3.65-9.51-3.65-13.15 0-3.65 3.65-3.65 9.51 0 13.15 3.65 3.65 9.51 3.65 13.15 0l.28.28v.79l4.8 4.8c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49l-4.8-4.8zm-6.5 0C6.48 14 4.5 12.02 4.5 9.5S6.48 5 9 5s4.5 1.98 4.5 4.5S11.52 14 9 14z"/></svg>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="/" onclick="closeMobileMenu()">Home</a>
+        <a href="/shop" onclick="closeMobileMenu()">Shop</a>
+        <a href="/events" onclick="closeMobileMenu()">Events</a>
+        <a href="/faq" onclick="closeMobileMenu()">FAQ</a>
+        <a href="/blog" onclick="closeMobileMenu()">Blog</a>
+        <a href="/contacts" onclick="closeMobileMenu()">Contacts</a>
+        <a href="/about" onclick="closeMobileMenu()">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="login-container">
+      <div class="login-card">
+        <!-- Login Form Side -->
+        <div class="login-form-side">
+          <div class="login-header">
+            <h1>Welcome Back</h1>
+            <p>Login to access your account</p>
+          </div>
+
+          <form id="login-form" class="login-form">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your email" 
+                required 
+              />
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="password-input-wrapper">
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  placeholder="Enter your password" 
+                  required 
+                />
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                  <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+              <span class="error-message" id="password-error"></span>
+            </div>
+
+            <div class="form-options">
+              <label class="remember-me">
+                <input type="checkbox" id="remember" name="remember" />
+                <span>Remember me</span>
+              </label>
+              <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">
+              <span id="login-btn-text">Login</span>
+              <span id="login-spinner" class="spinner" style="display: none;"></span>
+            </button>
+
+            <div class="divider">
+              <span>OR</span>
+            </div>
+
+            <div class="social-login">
+              <button type="button" class="social-btn google-btn" onclick="loginWithGoogle()">
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <path fill="#EA4335" d="M5.26620003,9.76452941 C6.19878754,6.93863203 8.85444915,4.90909091 12,4.90909091 C13.6909091,4.90909091 15.2181818,5.50909091 16.4181818,6.49090909 L19.9090909,3 C17.7818182,1.14545455 15.0545455,0 12,0 C7.27006974,0 3.1977497,2.69829785 1.23999023,6.65002441 L5.26620003,9.76452941 Z"/>
+                  <path fill="#34A853" d="M16.0407269,18.0125889 C14.9509167,18.7163016 13.5660892,19.0909091 12,19.0909091 C8.86648613,19.0909091 6.21911939,17.076871 5.27698177,14.2678769 L1.23746264,17.3349879 C3.19279051,21.2936293 7.26500293,24 12,24 C14.9328362,24 17.7353462,22.9573905 19.834192,20.9995801 L16.0407269,18.0125889 Z"/>
+                  <path fill="#4A90E2" d="M19.834192,20.9995801 C22.0291676,18.9520994 23.4545455,15.903663 23.4545455,12 C23.4545455,11.2909091 23.3454545,10.5818182 23.1818182,9.90909091 L12,9.90909091 L12,14.4545455 L18.4363636,14.4545455 C18.1187732,16.013626 17.2662994,17.2212117 16.0407269,18.0125889 L19.834192,20.9995801 Z"/>
+                  <path fill="#FBBC05" d="M5.27698177,14.2678769 C5.03832634,13.556323 4.90909091,12.7937589 4.90909091,12 C4.90909091,11.2182781 5.03443647,10.4668121 5.26620003,9.76452941 L1.23999023,6.65002441 C0.43658717,8.26043162 0,10.0753848 0,12 C0,13.9195484 0.444780743,15.7301709 1.23746264,17.3349879 L5.27698177,14.2678769 Z"/>
+                </svg>
+                Continue with Google
+              </button>
+              <button type="button" class="social-btn facebook-btn" onclick="loginWithFacebook()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Continue with Facebook
+              </button>
+            </div>
+
+            <div class="signup-link">
+              Don't have an account? <a href="/register">Sign Up</a>
+            </div>
+          </form>
+        </div>
+
+        <!-- Visual Side -->
+        <div class="login-visual-side">
+          <div class="visual-content">
+            <h2>Discover the World of Fine Wines</h2>
+            <p>Join our community of wine enthusiasts and explore exceptional wines from around the globe.</p>
+            <ul class="benefits-list">
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Exclusive wine collections
+              </li>
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Expert recommendations
+              </li>
+              <li>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Special member events
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
